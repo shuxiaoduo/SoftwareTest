@@ -8,14 +8,15 @@ import hotelTest.OutHotel;
 
 public class MainRun {
 
-	static IData iData;
-	private static ListHotel lh=new ListHotel();
+	static IData iData=new DP();
+	private static ListHotel lh=new ListHotel(iData);
 	private static InHotel ih=new InHotel(iData);
 	private static OutHotel oh=new OutHotel(iData);
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
 		iData.iniRooms();
+		command();
 	}
 
 	private static void command()
